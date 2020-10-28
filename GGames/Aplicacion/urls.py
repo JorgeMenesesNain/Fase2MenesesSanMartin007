@@ -8,3 +8,5 @@ urlpatterns = [
     path('trajetas/',views.tarjetas,name='tarJetas')
     
 ]
+
+urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
