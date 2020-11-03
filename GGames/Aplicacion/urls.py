@@ -8,4 +8,11 @@ urlpatterns = [
     path('tarjetas/',views.tarjetas,name='tarJetas'),
     path('ju/',views.JuegoListView.as_view(),name='ju'),
     path('j/<int:pk>',views.JuegoDetailView.as_view(),name='juego-detail'),
+    path('compañia/<int:pk>',views.CompañiaDetailView.as_view(), name='compañia-detail'),
+]
+
+urlpatterns+= [
+    path('compañia/create/',views.CompañiaCreate.as_view(), name='compañia_create'),
+    path('compañia/<int:pk>/delete/',views.CompañiaDelete.as_view(), name='compañia_delete'),
+    path('compañia/<int:pk>/update/',views.CompañiaUpdate.as_view(), name='compañia_update'),
 ]

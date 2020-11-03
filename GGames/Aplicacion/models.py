@@ -26,5 +26,8 @@ class Juego(models.Model):
 class Compañia(models.Model):
 	compañia = models.CharField(max_length=100)
 
+	def get_absolute_url(self):
+		return reverse('compañia-detail', args=[str(self.id)])
+
 	def __str__(self):
 		return self.compañia
