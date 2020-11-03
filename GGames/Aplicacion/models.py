@@ -16,6 +16,9 @@ class Juego(models.Model):
     
 	descirpcion = models.TextField(max_length=1000, help_text='Inserte una descripcion del juego')
 	genero = models.ManyToManyField(Genero)
+
+	def get_absolute_url(self):
+		return reverse('juego-detail', args=[str(self.id)])
     
 	def __str__(self):
 		return self.titulo

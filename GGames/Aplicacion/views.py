@@ -14,3 +14,10 @@ def juegos(request):
 def tarjetas(request):
     return render(
         request,"tarjetas.html")
+
+class JuegoListView(generic.ListView):
+    model=Juego
+    paginate=10
+
+class JuegoDetailView(generic.DetailView):
+    model=Juego

@@ -5,8 +5,7 @@ from . import views
 urlpatterns = [
     path('',views.index,name='index'),
     path('juegos/',views.juegos,name='juegos'),
-    path('trajetas/',views.tarjetas,name='tarJetas')
-    
+    path('tarjetas/',views.tarjetas,name='tarJetas'),
+    path('ju/',views.JuegoListView.as_view(),name='ju'),
+    path('j/<int:pk>',views.JuegoDetailView.as_view(),name='juego-detail'),
 ]
-
-urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
