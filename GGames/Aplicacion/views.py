@@ -17,6 +17,10 @@ def tarjetas(request):
     return render(
         request,"tarjetas.html")
 
+def formulario(request):
+    return render(
+        request,"formulario.html")
+
 class CompañiaCreate(CreateView):
     model = Compañia
     fields = '__all__'

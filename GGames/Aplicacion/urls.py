@@ -6,6 +6,7 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('juegos/',views.juegos,name='juegos'),
     path('tarjetas/',views.tarjetas,name='tarJetas'),
+    path('formulario/',views.formulario,name='formulario'),
     path('ju/',views.JuegoListView.as_view(),name='ju'),
     path('j/<int:pk>',views.JuegoDetailView.as_view(),name='juego-detail'),
     path('compañia/<int:pk>',views.CompañiaDetailView.as_view(), name='compañia-detail'),
