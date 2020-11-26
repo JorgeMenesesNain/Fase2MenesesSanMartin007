@@ -6,6 +6,9 @@ import uuid # Required for unique book instances
 class Genero(models.Model):
 	nombre_genero = models.CharField(max_length=200)
 	
+	def get_absolute_url(self):
+		return reverse('genero-detail', args=[str(self.id)])
+
 	def __str__(self):
 		return self.nombre_genero
 
